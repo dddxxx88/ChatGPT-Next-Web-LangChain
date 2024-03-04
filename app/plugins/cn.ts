@@ -39,7 +39,7 @@ export const CN_PLUGINS: BuiltinPlugin[] = [
     description: "用于与Wikipedia API交互和从Wikipedia API获取数据的工具。",
     builtin: true,
     createdAt: 1694235989000,
-    enable: false,
+    enable: true,
     onlyNodeRuntime: false,
   },
   {
@@ -50,7 +50,7 @@ export const CN_PLUGINS: BuiltinPlugin[] = [
       "DALL·E 可以根据自然语言的描述创建逼真的图像和艺术。使用本插件需要配置 Cloudflare R2 对象存储服务。",
     builtin: true,
     createdAt: 1694703673000,
-    enable: false,
+    enable: true,
     onlyNodeRuntime: false,
   },
   {
@@ -71,7 +71,7 @@ export const CN_PLUGINS: BuiltinPlugin[] = [
     description: "使用 Arxiv 接口搜索并获取文章信息。",
     builtin: true,
     createdAt: 1699265115000,
-    enable: false,
+    enable: true,
     onlyNodeRuntime: false,
   },
   {
