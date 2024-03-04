@@ -72,7 +72,7 @@ export const DEFAULT_CONFIG = {
   },
 
   ttsConfig: {
-    enable: false,
+    enable: true,
     autoplay: false,
     model: DEFAULT_TTS_MODEL,
     voice: DEFAULT_TTS_VOICE,
