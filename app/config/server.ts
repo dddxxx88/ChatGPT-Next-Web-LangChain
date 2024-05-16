@@ -60,7 +60,7 @@ function getApiKey(keys?: string) {
     console.log(
       `[Server Config] using ${randomIndex + 1} of ${
         apiKeys.length
-      } api key,
+      } api key`,
     );
   }
   // if (apiKey) {
