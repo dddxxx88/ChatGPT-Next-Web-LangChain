@@ -395,20 +395,13 @@ export const useChatStore = createPersistStore(
         var api: ClientApi;
         api = new ClientApi(ModelProvider.GPT);
         if (
-          config.pluginConfig.enable &&
-          session.mask.usePlugins != 'disabled' &&
+          session.mask.usePlugins &&
           (allPlugins.length > 0 || isEnableRAG) &&
-          isFunctionCalling( modelConfig.model ) &&
           modelConfig.model.startsWith("gpt") &&
           modelConfig.model != "gpt-4-vision-preview"
         ) {
           console.log("[ToolAgent] start");
-          // const pluginToolNames = allPlugins.map((m) => m.toolName);
-          const pluginToolNames = session.mask.usePlugins === 'rag'
-          ? ["rag-search"]
-          : session.mask.usePlugins === 'enabled'
-          ? allPlugins.map((m) => m.toolName)
-          : [];
+          const pluginToolNames = allPlugins.map((m) => m.toolName);
           if (isEnableRAG) pluginToolNames.push("rag-search");
           const agentCall = () => {
             api.llm.toolAgentChat({
