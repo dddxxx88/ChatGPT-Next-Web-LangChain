@@ -396,7 +396,7 @@ export const useChatStore = createPersistStore(
         api = new ClientApi(ModelProvider.GPT);
         if (
           config.pluginConfig.enable &&
-          session.mask.usePlugins !== 'disabled' &&
+          session.mask.usePlugins != 'disabled' &&
           (allPlugins.length > 0 || isEnableRAG) &&
           isFunctionCalling( modelConfig.model ) &&
           modelConfig.model.startsWith("gpt") &&
